@@ -57,6 +57,7 @@ Creates new form Home*///rosadito lindo
         jList1 = new javax.swing.JList<>();
         jPanel4 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         BtnMostrar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
@@ -136,9 +137,12 @@ Creates new form Home*///rosadito lindo
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 153, 204));
+        jLabel4.setForeground(new java.awt.Color(102, 153, 255));
         jLabel4.setText("home");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 90, 40));
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 90, 40));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jframes/Iconos/menu2.png"))); // NOI18N
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, 60, 50));
 
         jLabel2.setBackground(new java.awt.Color(51, 51, 51));
         jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 388, 62));
@@ -190,7 +194,8 @@ Creates new form Home*///rosadito lindo
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 390, 320));
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setForeground(new java.awt.Color(0, 153, 204));
+        jButton1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(102, 153, 255));
         jButton1.setText("Volver");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -293,6 +298,7 @@ Creates new form Home*///rosadito lindo
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
