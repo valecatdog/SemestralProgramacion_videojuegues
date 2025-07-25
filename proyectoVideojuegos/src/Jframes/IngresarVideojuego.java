@@ -9,6 +9,10 @@ import static Jframes.Home.videoJuegos;
 import javax.swing.JOptionPane;
 import logica.Videojuego;
 
+
+/*NOTAS
+PARECIERA QUE TODO ESTA FUNCIONANDO BIEN, DE ACUERDO A LAS CONDICIONES
+*/
 /**
  *
  * @author 57815971

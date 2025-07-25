@@ -10,6 +10,9 @@ import Jframes.IngresarVideojuego;
 import javax.swing.ImageIcon;
 import logica.Videojuego;
 
+/*NOTAS
+BOTONES TODOS FUNCIONANDO. JLIST TAMBIEN FUNCIONANDO.
+*/
 /**
  *
  * @author 57815971
@@ -226,9 +229,21 @@ Creates new form Home*///rosadito lindo
     }//GEN-LAST:event_BtnIngresarActionPerformed
 
     private void BtnSeleccionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSeleccionarActionPerformed
-       SeleccionVidejuego ventana = new SeleccionVidejuego();
-       ventana.setVisible(true);
-       this.dispose();
+        if(!videoJuegos.isEmpty()){
+            int posicion = jList1.getSelectedIndex();
+            Videojuego v = (Videojuego)videoJuegos.getElementAt(posicion);
+            if(v != null){
+                SeleccionVidejuego ventana = new SeleccionVidejuego(v);
+                ventana.setVisible(true);
+                this.dispose();
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Debes seleccionar un juego para usar esta opcion");   
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Debe haber por lo menos un videojuego creado para usar esta opcion");
+        }
     }//GEN-LAST:event_BtnSeleccionarActionPerformed
 
     private void BtnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBorrarActionPerformed
