@@ -92,7 +92,7 @@ public class Videojuego {//atributos
 
     @Override
     public String toString() {
-        return "Videojuego{" + "nombre=" + nombre + ", pegi=" + pegi + ", genero=" + genero + ", anioLanzamiento=" + anioLanzamiento + '}';
+        return nombre + ", pegi: " + pegi + ", genero: " + genero + ", Año de lanzamiento: " + anioLanzamiento;
     }
     
 }

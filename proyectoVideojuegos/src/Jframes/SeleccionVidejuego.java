@@ -17,10 +17,11 @@ public class SeleccionVidejuego extends javax.swing.JFrame {
      */
     public SeleccionVidejuego() {
         initComponents();
+       /* //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         ImageIcon icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/pink-geometric-background_53876-113910.jpg"));
         jLabel5.setIcon(icon);
-        icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/abstract-white-pink-luxury-background-with-wave_213860-2385.jpg"));
-        jLabel6.setIcon(icon);
+        icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/"));
+        jLabel6.setIcon(icon);*/
     }
 
     /**

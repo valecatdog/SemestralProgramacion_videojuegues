@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import Jframes.IngresarVideojuego;
 import javax.swing.ImageIcon;
+import logica.Videojuego;
 
 /**
  *
@@ -23,13 +24,13 @@ public static DefaultListModel videoJuegos = new DefaultListModel();
 Creates new form Home*///rosadito lindo 
   public Home() {
       initComponents();
-      ImageIcon icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/abstract-modern-background-with-soft-blue-gradient-color-gradient-lowpoly-element_8221-1294.jpg"));
+      /*ImageIcon icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/abstract-modern-background-with-soft-blue-gradient-color-gradient-lowpoly-element_8221-1294.jpg"));
       jLabel2.setIcon(icon);
-        icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/beautiful-linear-color-waves-vector-30405919.jpg"));
-        jLabel3.setIcon(icon);
+      icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/beautiful-linear-color-waves-vector-30405919.jpg"));
+      jLabel3.setIcon(icon);
       setTitle("Home");
       jList1.setModel(videoJuegos);
-      this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+      this.setExtendedState(JFrame.MAXIMIZED_BOTH);*/
 
   }
 
@@ -236,7 +237,11 @@ Creates new form Home*///rosadito lindo
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void BtnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnMostrarActionPerformed
-        // TODO add your handling code here:
+        if(!videoJuegos.isEmpty()){
+            int posicion = jList1.getSelectedIndex();
+            Videojuego v = (Videojuego)videoJuegos.getElementAt(posicion);
+            JOptionPane.showMessageDialog(this, v);
+        }
     }//GEN-LAST:event_BtnMostrarActionPerformed
 
     /**

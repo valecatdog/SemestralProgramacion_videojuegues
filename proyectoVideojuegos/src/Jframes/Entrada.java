@@ -17,7 +17,7 @@ public class Entrada extends javax.swing.JFrame {
      */
     public Entrada() {
         initComponents();
-        //importar las imagenes manualmente porque NetBeans es graciosito y le pone NULLPointer Exeption si lo importar por el GUI
+       /* //importar las imagenes manualmente porque NetBeans es graciosito y le pone NULLPointer Exeption si lo importar por el GUI
         ImageIcon icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/Gradient.jpg"));
         jLabel1.setIcon(icon);
         icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/twitter.png"));
@@ -25,7 +25,7 @@ public class Entrada extends javax.swing.JFrame {
         icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/facebook.png"));
         jButton2.setIcon(icon);
         icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/google1.png"));
-        jButton3.setIcon(icon);
+        jButton3.setIcon(icon);*/
      
     }
 
