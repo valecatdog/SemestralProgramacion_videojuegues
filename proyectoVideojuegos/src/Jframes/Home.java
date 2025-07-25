@@ -129,7 +129,7 @@ Creates new form Home*///rosadito lindo
         jLabel4.setText("home");
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 90, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jframes/Iconos/abstract-modern-background-with-soft-blue-gradient-color-gradient-lowpoly-element_8221-1294.jpg"))); // NOI18N
+        jLabel2.setBackground(new java.awt.Color(51, 51, 51));
         jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 388, 62));
 
         BtnMostrar.setBackground(new java.awt.Color(255, 255, 255));
@@ -187,8 +187,6 @@ Creates new form Home*///rosadito lindo
             }
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 80, -1));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jframes/Iconos/beautiful-linear-color-waves-vector-30405919.jpg"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 777, 520));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

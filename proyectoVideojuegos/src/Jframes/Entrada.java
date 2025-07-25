@@ -58,6 +58,10 @@ public class Entrada extends javax.swing.JFrame {
         btnEntrar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         btnEntrar.setForeground(new java.awt.Color(255, 255, 255));
         btnEntrar.setText("Ingresar");
+        btnEntrar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        btnEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        btnEntrar.setDebugGraphicsOptions(javax.swing.DebugGraphics.FLASH_OPTION);
+        btnEntrar.setFocusPainted(false);
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEntrarActionPerformed(evt);
@@ -68,7 +72,7 @@ public class Entrada extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Entrada");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 38, 121, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 121, -1));
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -91,8 +95,11 @@ public class Entrada extends javax.swing.JFrame {
         jLabel9.setText("Nacho Goldman");
         jLabel9.setToolTipText("");
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 137, 121, -1));
+
+        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 100, 10));
 
+        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 17)); // NOI18N
@@ -102,7 +109,6 @@ public class Entrada extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(51, 51, 51));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jframes/Iconos/twitter.png"))); // NOI18N
         jButton1.setText("Acceso con X");
         jButton1.setAutoscrolls(true);
         jButton1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -110,14 +116,12 @@ public class Entrada extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(0, 102, 153));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jframes/Iconos/facebook.png"))); // NOI18N
         jButton2.setText("Acceso con Facebook");
         jButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 180, -1));
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setForeground(new java.awt.Color(102, 102, 102));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jframes/Iconos/google1.png"))); // NOI18N
         jButton3.setText("Acceso con Google");
         jButton3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 180, -1));
@@ -127,7 +131,7 @@ public class Entrada extends javax.swing.JFrame {
         jLabel10.setText("Acceder con:");
         jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 121, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jframes/Iconos/Gradient.jpg"))); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 298));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
