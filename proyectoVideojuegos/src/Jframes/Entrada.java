@@ -109,7 +109,7 @@ public class Entrada extends javax.swing.JFrame {
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 137, 121, -1));
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator1.setForeground(new java.awt.Color(51, 51, 51));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 100, 10));
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
@@ -153,8 +153,9 @@ public class Entrada extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel5.setText("all rights not reserved");
+        jLabel5.setText(" all rights not reserved 2025");
 
+        jLabel11.setBackground(new java.awt.Color(153, 153, 153));
         jLabel11.setText("AS-VC-Software");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
