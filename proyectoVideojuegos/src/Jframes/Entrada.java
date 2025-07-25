@@ -4,6 +4,8 @@
  */
 package Jframes;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author hexal
@@ -15,6 +17,16 @@ public class Entrada extends javax.swing.JFrame {
      */
     public Entrada() {
         initComponents();
+        //importar las imagenes manualmente porque NetBeans es graciosito y le pone NULLPointer Exeption si lo importar por el GUI
+        ImageIcon icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/Gradient.jpg"));
+        jLabel1.setIcon(icon);
+        icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/twitter.png"));
+        jButton1.setIcon(icon);
+        icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/facebook.png"));
+        jButton2.setIcon(icon);
+        icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/google1.png"));
+        jButton3.setIcon(icon);
+     
     }
 
     /**
@@ -97,6 +109,7 @@ public class Entrada extends javax.swing.JFrame {
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 137, 121, -1));
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setForeground(new java.awt.Color(51, 51, 51));
         jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 100, 10));
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));

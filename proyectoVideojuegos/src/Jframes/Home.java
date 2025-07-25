@@ -7,6 +7,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import Jframes.IngresarVideojuego;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -20,6 +21,10 @@ public static DefaultListModel videoJuegos = new DefaultListModel();
 Creates new form Home*///rosadito lindo 
   public Home() {
       initComponents();
+      ImageIcon icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/abstract-modern-background-with-soft-blue-gradient-color-gradient-lowpoly-element_8221-1294.jpg"));
+      jLabel2.setIcon(icon);
+        icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/beautiful-linear-color-waves-vector-30405919.jpg"));
+        jLabel3.setIcon(icon);
       setTitle("Home");
       jList1.setModel(videoJuegos);
       this.setExtendedState(JFrame.MAXIMIZED_BOTH);
