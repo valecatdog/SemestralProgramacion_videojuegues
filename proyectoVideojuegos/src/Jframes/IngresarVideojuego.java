@@ -70,6 +70,8 @@ public class IngresarVideojuego extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
+        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -82,6 +84,7 @@ public class IngresarVideojuego extends javax.swing.JFrame {
         );
 
         grupoPEGI.add(rbtn3);
+        rbtn3.setForeground(new java.awt.Color(51, 51, 51));
         rbtn3.setSelected(true);
         rbtn3.setText("3");
         rbtn3.addActionListener(new java.awt.event.ActionListener() {
@@ -91,31 +94,39 @@ public class IngresarVideojuego extends javax.swing.JFrame {
         });
 
         grupoPEGI.add(rbtn5);
+        rbtn5.setForeground(new java.awt.Color(51, 51, 51));
         rbtn5.setText("5");
 
         grupoPEGI.add(rbtn12);
+        rbtn12.setForeground(new java.awt.Color(51, 51, 51));
         rbtn12.setText("12");
 
         jLabel1.setForeground(new java.awt.Color(102, 102, 102));
         jLabel1.setText("Nombre");
+        jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         grupoPEGI.add(rbtn18);
+        rbtn18.setForeground(new java.awt.Color(51, 51, 51));
         rbtn18.setText("18");
 
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setText("Anio lanzamiento");
         jLabel2.setToolTipText("");
+        jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         grupoPEGI.add(rbtn16);
+        rbtn16.setForeground(new java.awt.Color(51, 51, 51));
         rbtn16.setText("16");
 
         jLabel3.setForeground(new java.awt.Color(102, 102, 102));
         jLabel3.setText("Codigo Pegi");
+        jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jLabel4.setForeground(new java.awt.Color(102, 102, 102));
         jLabel4.setText("Genero");
+        jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        btnIngresar.setBackground(new java.awt.Color(60, 63, 65));
+        btnIngresar.setBackground(new java.awt.Color(51, 51, 51));
         btnIngresar.setForeground(new java.awt.Color(255, 51, 153));
         btnIngresar.setText("Ingresar");
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
@@ -124,13 +135,13 @@ public class IngresarVideojuego extends javax.swing.JFrame {
             }
         });
 
-        txtFieldNombre.setBackground(new java.awt.Color(60, 63, 65));
+        txtFieldNombre.setBackground(new java.awt.Color(51, 51, 51));
         txtFieldNombre.setForeground(new java.awt.Color(255, 51, 153));
 
-        txtFieldAnioLanz.setBackground(new java.awt.Color(60, 63, 65));
+        txtFieldAnioLanz.setBackground(new java.awt.Color(51, 51, 51));
         txtFieldAnioLanz.setForeground(new java.awt.Color(255, 51, 153));
 
-        txtFieldGenero.setBackground(new java.awt.Color(60, 63, 65));
+        txtFieldGenero.setBackground(new java.awt.Color(51, 51, 51));
         txtFieldGenero.setForeground(new java.awt.Color(255, 51, 153));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -205,22 +216,22 @@ public class IngresarVideojuego extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(257, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(253, 253, 253))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(208, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(201, 201, 201))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton1)
-                .addGap(57, 57, 57)
+                .addGap(69, 69, 69)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
