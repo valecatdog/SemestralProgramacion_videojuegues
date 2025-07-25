@@ -3,13 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Jframes;
+import java.time.Year;
+import Jframes.Home;
+import static Jframes.Home.videoJuegos;
+import javax.swing.JOptionPane;
+import logica.Videojuego;
 
 /**
  *
  * @author 57815971
  */
 public class IngresarVideojuego extends javax.swing.JFrame {
-
+    private IngresarVideojuego ingresarVideojuego;
     /**
      * Creates new form IngresarVideojuego
      */
@@ -27,7 +32,7 @@ public class IngresarVideojuego extends javax.swing.JFrame {
     private void initComponents() {
 
         jTextField3 = new javax.swing.JTextField();
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        grupoPEGI = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -36,7 +41,7 @@ public class IngresarVideojuego extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         btnIngresar = new javax.swing.JButton();
         txtFieldNombre = new javax.swing.JTextField();
-        txtFieldAño = new javax.swing.JTextField();
+        txtFieldAnioLanz = new javax.swing.JTextField();
         txtFieldGenero = new javax.swing.JTextField();
         rbtn3 = new javax.swing.JRadioButton();
         rbtn5 = new javax.swing.JRadioButton();
@@ -76,20 +81,31 @@ public class IngresarVideojuego extends javax.swing.JFrame {
         txtFieldNombre.setBackground(new java.awt.Color(204, 204, 204));
         txtFieldNombre.setForeground(new java.awt.Color(255, 51, 153));
 
-        txtFieldAño.setBackground(new java.awt.Color(204, 204, 204));
-        txtFieldAño.setForeground(new java.awt.Color(255, 51, 153));
+        txtFieldAnioLanz.setBackground(new java.awt.Color(204, 204, 204));
+        txtFieldAnioLanz.setForeground(new java.awt.Color(255, 51, 153));
 
         txtFieldGenero.setBackground(new java.awt.Color(204, 204, 204));
         txtFieldGenero.setForeground(new java.awt.Color(255, 51, 153));
 
+        grupoPEGI.add(rbtn3);
+        rbtn3.setSelected(true);
         rbtn3.setText("3");
+        rbtn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtn3ActionPerformed(evt);
+            }
+        });
 
+        grupoPEGI.add(rbtn5);
         rbtn5.setText("5");
 
+        grupoPEGI.add(rbtn12);
         rbtn12.setText("12");
 
+        grupoPEGI.add(rbtn18);
         rbtn18.setText("18");
 
+        grupoPEGI.add(rbtn16);
         rbtn16.setText("16");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -108,7 +124,7 @@ public class IngresarVideojuego extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtFieldAño, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtFieldAnioLanz, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -140,7 +156,7 @@ public class IngresarVideojuego extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtFieldAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtFieldAnioLanz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -217,45 +233,70 @@ public class IngresarVideojuego extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
-        Year anioLanzamiento = Year.parse(txtFieldAño.getText());
-        if (anioLanzamiento.getValue() < Year.now().plusYears(2).getValue()){// se puede mejorar
-            String nombre = txtFieldNombre.getText();
-            String genero = txtFieldGenero.getText();
-            int pegi = 0;
-            if (rbtn3.isSelected()){ // se puede mejorar
-                pegi = 3;
+        if(txtFieldNombre.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this, "El campo 'Nombre' debe estar completo");
+        }
+        else{
+            if(txtFieldAnioLanz.getText().isEmpty()){
+                JOptionPane.showMessageDialog(this, "El campo 'Año de lanzamiento' debe estar completo");
             }
             else{
-                if (rbtn5.isSelected()){
-                    pegi = 5;
+                Year anioLanzamiento = Year.parse(txtFieldAnioLanz.getText());
+                if (anioLanzamiento.getValue() > Year.now().plusYears(2).getValue()){
+                    JOptionPane.showMessageDialog(this, "El campo 'Año de lanzamiento' debe ser "+Year.now().plusYears(2).getValue()+" o  menor");
                 }
                 else{
-                    if (rbtn12.isSelected()){
-                        pegi = 12;
+                    if(txtFieldGenero.getText().isEmpty()){
+                        JOptionPane.showMessageDialog(this, "El campo 'Genero' debe estar completo");
                     }
-                    else{
-                        if(rbtn16.isSelected()){
-                            pegi = 16;
+                    else{//ACA
+                        String nombre = txtFieldNombre.getText();
+                        String genero = txtFieldGenero.getText();
+                        int pegi = 0;
+                        if (rbtn3.isSelected()){ // se puede mejorar
+                            pegi = 3;
                         }
                         else{
-                            pegi = 18;
+                            if (rbtn5.isSelected()){
+                                pegi = 5;
+                            }
+                            else{
+                                if (rbtn12.isSelected()){
+                                    pegi = 12;
+                                }
+                                else{
+                                    if(rbtn16.isSelected()){
+                                        pegi = 16;
+                                    }
+                                        else{
+                                            pegi = 18;
+                                    }
+                                }
+                            }
                         }
+                        Videojuego juego = new Videojuego(nombre, pegi, genero, anioLanzamiento);
+                        videoJuegos.addElement(juego);
+                        Home volver = new Home();
+                        volver.setVisible(true);
+                        this.dispose();
                     }
                 }
             }
-            Videojuego juego = new Videojuego(nombre, pegi, genero, anioLanzamiento);
-            videoJuegos.addElement(juego);
-            Home volver = new Home();
-            volver.setVisible(true);
-            this.dispose();
+        }
+     
+            
     }//GEN-LAST:event_btnIngresarActionPerformed
+
+    private void rbtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtn3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbtn3ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+    //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
@@ -287,7 +328,7 @@ public class IngresarVideojuego extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIngresar;
-    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup grupoPEGI;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -302,8 +343,9 @@ public class IngresarVideojuego extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbtn18;
     private javax.swing.JRadioButton rbtn3;
     private javax.swing.JRadioButton rbtn5;
-    private javax.swing.JTextField txtFieldAño;
+    private javax.swing.JTextField txtFieldAnioLanz;
     private javax.swing.JTextField txtFieldGenero;
     private javax.swing.JTextField txtFieldNombre;
     // End of variables declaration//GEN-END:variables
 }
+
