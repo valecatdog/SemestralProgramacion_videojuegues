@@ -18,19 +18,20 @@ import logica.Videojuego;
 //THIS IS A COMENTARIO COMENTARIADO
 public class Home extends javax.swing.JFrame {
 public static DefaultListModel videoJuegos = new DefaultListModel();
-    private Home home;
+private Home home;
     /**
      
 Creates new form Home*///rosadito lindo 
   public Home() {
       initComponents();
-      /*ImageIcon icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/abstract-modern-background-with-soft-blue-gradient-color-gradient-lowpoly-element_8221-1294.jpg"));
+      //hay que hacele clean build pq pobrecito netbeans tiene alzeimer y se le olvidan las rutas cada vez que pones una imagen nueva
+      ImageIcon icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/abstract-modern-background-with-soft-blue-gradient-color-gradient-lowpoly-element_8221-1294.jpg"));
       jLabel2.setIcon(icon);
       icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/beautiful-linear-color-waves-vector-30405919.jpg"));
       jLabel3.setIcon(icon);
       setTitle("Home");
       jList1.setModel(videoJuegos);
-      this.setExtendedState(JFrame.MAXIMIZED_BOTH);*/
+      this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
   }
 
@@ -109,8 +110,10 @@ Creates new form Home*///rosadito lindo
         jPanel3.setForeground(new java.awt.Color(255, 51, 153));
 
         jScrollPane2.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollPane2.setForeground(new java.awt.Color(51, 51, 51));
 
         jList1.setBackground(new java.awt.Color(255, 255, 255));
+        jList1.setForeground(new java.awt.Color(51, 51, 51));
         jScrollPane2.setViewportView(jList1);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
