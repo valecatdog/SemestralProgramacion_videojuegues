@@ -200,7 +200,7 @@ public static DefaultListModel videoJuegos;
     }//GEN-LAST:event_BtnIngresarActionPerformed
 
     private void BtnSeleccionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSeleccionarActionPerformed
-       SeleccionVideojuego ventana = new SeleccionVideojuego();
+       SeleccionVidejuego ventana = new SeleccionVidejuego();
        ventana.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_BtnSeleccionarActionPerformed
