@@ -13,6 +13,8 @@ import javax.swing.ImageIcon;
  *
  * @author 57815971
  */
+
+//THIS IS A COMENTARIO COMENTARIADO
 public class Home extends javax.swing.JFrame {
 public static DefaultListModel videoJuegos = new DefaultListModel();
     private Home home;
