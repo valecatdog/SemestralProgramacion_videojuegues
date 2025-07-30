@@ -14,6 +14,7 @@ public class Entrada extends javax.swing.JFrame {
 
     /**
      * Creates new form Entrada
+     * hola
      */
     public Entrada() {
         initComponents();
@@ -79,7 +80,7 @@ public class Entrada extends javax.swing.JFrame {
                 btnEntrarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 233, 190, 40));
+        jPanel2.add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 190, 40));
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
