@@ -63,6 +63,7 @@ Creates new form Home*///rosadito lindo
         jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         BtnMostrar = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
@@ -160,6 +161,13 @@ Creates new form Home*///rosadito lindo
             }
         });
 
+        jButton3.setText("Es reciente mayor");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -175,6 +183,10 @@ Creates new form Home*///rosadito lindo
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jButton3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,10 +203,12 @@ Creates new form Home*///rosadito lindo
                         .addGap(18, 18, 18)
                         .addComponent(BtnMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton3)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 390, 320));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 390, 340));
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
@@ -246,6 +260,9 @@ Creates new form Home*///rosadito lindo
         int posicion = jList1.getSelectedIndex();
         videoJuegos.remove(posicion);
        }
+       else{
+            JOptionPane.showMessageDialog(this, "Debe haber por lo menos un videojuego creado para usar esta opcion");
+       }
     }//GEN-LAST:event_BtnBorrarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -261,6 +278,17 @@ Creates new form Home*///rosadito lindo
             JOptionPane.showMessageDialog(this, v);
         }
     }//GEN-LAST:event_BtnMostrarActionPerformed
+          
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        int posicion = jList1.getSelectedIndex();
+        Videojuego v = (Videojuego)videoJuegos.getElementAt(posicion);
+        if(v.esRecienteMayor()){
+            JOptionPane.showMessageDialog(this, "Si es reciente mayor");
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "No es reciente mayor");
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -304,6 +332,7 @@ Creates new form Home*///rosadito lindo
     private javax.swing.JButton BtnSeleccionar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

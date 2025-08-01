@@ -95,6 +95,17 @@ public class Videojuego {//atributos
         return nombre + ", pegi: " + pegi + ", genero: " + genero + ", Año de lanzamiento: " + anioLanzamiento;
     }
     
+    public boolean esRecienteMayor(){
+        boolean cumple;
+        if((this.pegi == 18) && (this.anioLanzamiento.getValue() > 2010)){
+            cumple = true;
+        }
+        else{
+            cumple = false;
+        }
+        return cumple;
+        
+    }
 }
     
     
