@@ -232,14 +232,9 @@ Creates new form Home*///rosadito lindo
         if(!videoJuegos.isEmpty()){
             int posicion = jList1.getSelectedIndex();
             Videojuego v = (Videojuego)videoJuegos.getElementAt(posicion);
-            if(v != null){
-                SeleccionVidejuego ventana = new SeleccionVidejuego(v);
-                ventana.setVisible(true);
-                this.dispose();
-            }
-            else{
-                JOptionPane.showMessageDialog(this, "Debes seleccionar un juego para usar esta opcion");   
-            }
+            SeleccionVidejuego ventana = new SeleccionVidejuego(v);
+            ventana.setVisible(true);
+            this.dispose();
         }
         else{
             JOptionPane.showMessageDialog(this, "Debe haber por lo menos un videojuego creado para usar esta opcion");

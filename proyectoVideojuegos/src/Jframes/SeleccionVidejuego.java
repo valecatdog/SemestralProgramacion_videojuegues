@@ -388,7 +388,7 @@ public class SeleccionVidejuego extends javax.swing.JFrame {
     private void btnModificarPEGIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarPEGIActionPerformed
         String pegi = JOptionPane.showInputDialog(this, "Ingrese el pegi (3, 5, 12, 16 o 18)");
         
-        if(pegi.equals("3") || pegi.equals("5") || pegi.equals("12")|| pegi.equals("16") || pegi.equals("18")){
+        if(!(pegi.equals("3") || pegi.equals("5") || pegi.equals("12")|| pegi.equals("16") || pegi.equals("18"))){
             JOptionPane.showMessageDialog(this, "No se ingresó un valor válido");
         }
         else{
@@ -412,7 +412,7 @@ public class SeleccionVidejuego extends javax.swing.JFrame {
 
     private void btnModificarGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarGeneroActionPerformed
         int generoInt = Integer.parseInt(JOptionPane.showInputDialog(this, "Ingrese el géero (1-Rol, 2-Carreras, 3-FPS)"));
-        if(generoInt == 1 || generoInt == 3 || generoInt == 3){
+        if(generoInt == 1 || generoInt == 2 || generoInt == 3){
             if(generoInt ==1){
                 juego.setGenero("Rol");
                 lblGenero.setText("Rol");
