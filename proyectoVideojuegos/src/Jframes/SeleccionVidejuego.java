@@ -5,6 +5,19 @@
 package Jframes;
 
 import javax.swing.ImageIcon;
+import Jframes.Home;
+import javax.swing.JOptionPane;
+import logica.Videojuego;
+import java.time.Year;
+
+/*NOTAS
+ANDA BIEN VOLVER
+CAMBIE LO QEU DECIAN LOS LABELS
+
+LOS JLABELSNO MUESTRAN LO QUE TIENEN QUE MOSTRAR
+LOS BOTONES NO SIRVE NINGUNO PARA NADA
+
+*/
 
 /**
  *
@@ -15,8 +28,13 @@ public class SeleccionVidejuego extends javax.swing.JFrame {
     /**
      * Creates new form SeleccionVidejuego
      */
-    public SeleccionVidejuego() {
+
+    private Videojuego juego;
+    
+    public SeleccionVidejuego(Videojuego videojuego) {
+        
         initComponents();
+        this.juego = videojuego;
         //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         ImageIcon icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/pink-geometric-background_53876-113910.jpg"));
         jLabel5.setIcon(icon);
@@ -24,6 +42,12 @@ public class SeleccionVidejuego extends javax.swing.JFrame {
         jLabel6.setIcon(icon);
         icon = new ImageIcon(getClass().getResource("/Jframes/Iconos/abstract-white-pink-luxury-background-with-wave_213860-23852.jpg"));
         jLabel6.setIcon(icon);
+        lblNombre.setText(juego.getNombre());
+        lblPEGI.setText(String.valueOf(juego.getPegi()));
+        lblGenero.setText(juego.getGenero());
+        lblAnioLanz.setText(String.valueOf(juego.getAñoLanzamiento().getValue()));
+        
+        
     }
 
     /**
@@ -49,18 +73,18 @@ public class SeleccionVidejuego extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        btnModificar1 = new javax.swing.JButton();
-        btnModificar2 = new javax.swing.JButton();
-        btnModificar3 = new javax.swing.JButton();
-        btnModificar4 = new javax.swing.JButton();
+        btnModificarPEGI = new javax.swing.JButton();
+        btnModificarNombre = new javax.swing.JButton();
+        btnModificarGenero = new javax.swing.JButton();
+        btnModificarAnioLanz = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
-        lblTitulo = new javax.swing.JLabel();
+        lblNombre = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        lblPegi = new javax.swing.JLabel();
+        lblPEGI = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
-        lblActual = new javax.swing.JLabel();
+        lblGenero = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
-        lblAño = new javax.swing.JLabel();
+        lblAnioLanz = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
@@ -112,77 +136,77 @@ public class SeleccionVidejuego extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Texto Actual");
+        jLabel1.setText("Nombre");
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 51, 51));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Codigo P actual");
+        jLabel2.setText("Código PEGI");
         jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(51, 51, 51));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Genero actual");
+        jLabel3.setText("Género");
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Año actual");
+        jLabel4.setText("Año de lanzamiento");
         jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        btnModificar1.setBackground(new java.awt.Color(255, 255, 255));
-        btnModificar1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        btnModificar1.setForeground(new java.awt.Color(51, 51, 51));
-        btnModificar1.setText("Modificar");
-        btnModificar1.setPreferredSize(new java.awt.Dimension(89, 18));
-        btnModificar1.addActionListener(new java.awt.event.ActionListener() {
+        btnModificarPEGI.setBackground(new java.awt.Color(255, 255, 255));
+        btnModificarPEGI.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        btnModificarPEGI.setForeground(new java.awt.Color(51, 51, 51));
+        btnModificarPEGI.setText("Modificar");
+        btnModificarPEGI.setPreferredSize(new java.awt.Dimension(89, 18));
+        btnModificarPEGI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnModificar1ActionPerformed(evt);
+                btnModificarPEGIActionPerformed(evt);
             }
         });
 
-        btnModificar2.setBackground(new java.awt.Color(255, 255, 255));
-        btnModificar2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        btnModificar2.setForeground(new java.awt.Color(51, 51, 51));
-        btnModificar2.setText("Modificar");
-        btnModificar2.setPreferredSize(new java.awt.Dimension(89, 18));
-        btnModificar2.addActionListener(new java.awt.event.ActionListener() {
+        btnModificarNombre.setBackground(new java.awt.Color(255, 255, 255));
+        btnModificarNombre.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        btnModificarNombre.setForeground(new java.awt.Color(51, 51, 51));
+        btnModificarNombre.setText("Modificar");
+        btnModificarNombre.setPreferredSize(new java.awt.Dimension(89, 18));
+        btnModificarNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnModificar2ActionPerformed(evt);
+                btnModificarNombreActionPerformed(evt);
             }
         });
 
-        btnModificar3.setBackground(new java.awt.Color(255, 255, 255));
-        btnModificar3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        btnModificar3.setForeground(new java.awt.Color(51, 51, 51));
-        btnModificar3.setText("Modificar");
-        btnModificar3.setPreferredSize(new java.awt.Dimension(89, 18));
-        btnModificar3.addActionListener(new java.awt.event.ActionListener() {
+        btnModificarGenero.setBackground(new java.awt.Color(255, 255, 255));
+        btnModificarGenero.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        btnModificarGenero.setForeground(new java.awt.Color(51, 51, 51));
+        btnModificarGenero.setText("Modificar");
+        btnModificarGenero.setPreferredSize(new java.awt.Dimension(89, 18));
+        btnModificarGenero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnModificar3ActionPerformed(evt);
+                btnModificarGeneroActionPerformed(evt);
             }
         });
 
-        btnModificar4.setBackground(new java.awt.Color(255, 255, 255));
-        btnModificar4.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        btnModificar4.setForeground(new java.awt.Color(51, 51, 51));
-        btnModificar4.setText("Modificar");
-        btnModificar4.setPreferredSize(new java.awt.Dimension(89, 18));
-        btnModificar4.addActionListener(new java.awt.event.ActionListener() {
+        btnModificarAnioLanz.setBackground(new java.awt.Color(255, 255, 255));
+        btnModificarAnioLanz.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        btnModificarAnioLanz.setForeground(new java.awt.Color(51, 51, 51));
+        btnModificarAnioLanz.setText("Modificar");
+        btnModificarAnioLanz.setPreferredSize(new java.awt.Dimension(89, 18));
+        btnModificarAnioLanz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnModificar4ActionPerformed(evt);
+                btnModificarAnioLanzActionPerformed(evt);
             }
         });
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        lblTitulo.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        lblTitulo.setForeground(new java.awt.Color(255, 153, 153));
-        lblTitulo.setText("jLabel6");
+        lblNombre.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        lblNombre.setForeground(new java.awt.Color(255, 153, 153));
+        lblNombre.setText("jLabel6");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -190,22 +214,22 @@ public class SeleccionVidejuego extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lblTitulo))
+                .addComponent(lblNombre))
         );
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        lblPegi.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        lblPegi.setForeground(new java.awt.Color(255, 153, 153));
-        lblPegi.setText("jLabel6");
+        lblPEGI.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        lblPEGI.setForeground(new java.awt.Color(255, 153, 153));
+        lblPEGI.setText("jLabel6");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -213,22 +237,22 @@ public class SeleccionVidejuego extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblPegi, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblPEGI, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lblPegi))
+                .addComponent(lblPEGI))
         );
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        lblActual.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        lblActual.setForeground(new java.awt.Color(255, 153, 153));
-        lblActual.setText("jLabel6");
+        lblGenero.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        lblGenero.setForeground(new java.awt.Color(255, 153, 153));
+        lblGenero.setText("jLabel6");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -236,22 +260,22 @@ public class SeleccionVidejuego extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblActual, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lblActual))
+                .addComponent(lblGenero))
         );
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
         jPanel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        lblAño.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        lblAño.setForeground(new java.awt.Color(255, 153, 153));
-        lblAño.setText("jLabel6");
+        lblAnioLanz.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        lblAnioLanz.setForeground(new java.awt.Color(255, 153, 153));
+        lblAnioLanz.setText("jLabel6");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -259,14 +283,14 @@ public class SeleccionVidejuego extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblAño, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblAnioLanz, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lblAño))
+                .addComponent(lblAnioLanz))
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -290,16 +314,16 @@ public class SeleccionVidejuego extends javax.swing.JFrame {
                             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnModificar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnModificar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnModificarPEGI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnModificarNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnModificar4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnModificar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btnModificarAnioLanz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnModificarGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -309,23 +333,23 @@ public class SeleccionVidejuego extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btnModificar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnModificarNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btnModificar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnModificarPEGI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnModificar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnModificarGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnModificar4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnModificarAnioLanz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addGap(19, 19, 19))
@@ -361,21 +385,77 @@ public class SeleccionVidejuego extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void btnModificar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnModificar1ActionPerformed
+    private void btnModificarPEGIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarPEGIActionPerformed
+        String pegi = JOptionPane.showInputDialog(this, "Ingrese el pegi (3, 5, 12, 16 o 18)");
+        
+        if(pegi.equals("3") || pegi.equals("5") || pegi.equals("12")|| pegi.equals("16") || pegi.equals("18")){
+            JOptionPane.showMessageDialog(this, "No se ingresó un valor válido");
+        }
+        else{
+            juego.setPegi(Integer.parseInt(pegi));
+            lblPEGI.setText(pegi);
+        }
+        
+        
+    }//GEN-LAST:event_btnModificarPEGIActionPerformed
 
-    private void btnModificar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnModificar2ActionPerformed
+    private void btnModificarNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarNombreActionPerformed
+        String nombreNuevo = JOptionPane.showInputDialog(null, "Modifique el nombre:");
+        
+        if (!nombreNuevo.trim().isEmpty()) {
+            juego.setNombre(nombreNuevo);
+            lblNombre.setText(nombreNuevo); 
+        } else {
+            JOptionPane.showMessageDialog(this, "Debe ingresar un nombre");
+        }
+    }//GEN-LAST:event_btnModificarNombreActionPerformed
 
-    private void btnModificar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificar3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnModificar3ActionPerformed
+    private void btnModificarGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarGeneroActionPerformed
+        int generoInt = Integer.parseInt(JOptionPane.showInputDialog(this, "Ingrese el géero (1-Rol, 2-Carreras, 3-FPS)"));
+        if(generoInt == 1 || generoInt == 3 || generoInt == 3){
+            if(generoInt ==1){
+                juego.setGenero("Rol");
+                lblGenero.setText("Rol");
+            }
+            else{
+                if(generoInt ==2){
+                juego.setGenero("Carreras");
+                lblGenero.setText("Carreras");
+                }
+                else{
+                    juego.setGenero("FPS");
+                lblGenero.setText("FPS");
+                }
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "No se ingesó un valor válido");
+        }
+    }//GEN-LAST:event_btnModificarGeneroActionPerformed
 
-    private void btnModificar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificar4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnModificar4ActionPerformed
+    private void btnModificarAnioLanzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarAnioLanzActionPerformed
+        String anio = JOptionPane.showInputDialog(this, "ingrese el año");
+        if (!anio.trim().isEmpty()){
+            int anioInt = Integer.parseInt(anio);
+            
+            if(anioInt < 2000){
+                lblAnioLanz.setText("2000");
+                juego.setAñoLanzamiento(Year.of(2000));
+            }
+            else{
+                if(anioInt > Year.now().plusYears(2).getValue()){
+                    JOptionPane.showMessageDialog(this, "No puede ingresar años mayores a "+Year.now().plusYears(2).getValue());
+                }
+                else{
+                    lblAnioLanz.setText(anio);
+                    juego.setAñoLanzamiento(Year.of(anioInt));
+                }
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Debe ingresar algo en este campo");
+        }
+    }//GEN-LAST:event_btnModificarAnioLanzActionPerformed
 
     /**
      * @param args the command line arguments
@@ -407,16 +487,17 @@ public class SeleccionVidejuego extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SeleccionVidejuego().setVisible(true);
+                Videojuego juego = new Videojuego();
+                new SeleccionVidejuego(juego).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnModificar1;
-    private javax.swing.JButton btnModificar2;
-    private javax.swing.JButton btnModificar3;
-    private javax.swing.JButton btnModificar4;
+    private javax.swing.JButton btnModificarAnioLanz;
+    private javax.swing.JButton btnModificarGenero;
+    private javax.swing.JButton btnModificarNombre;
+    private javax.swing.JButton btnModificarPEGI;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -437,9 +518,9 @@ public class SeleccionVidejuego extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JLabel lblActual;
-    private javax.swing.JLabel lblAño;
-    private javax.swing.JLabel lblPegi;
-    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblAnioLanz;
+    private javax.swing.JLabel lblGenero;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblPEGI;
     // End of variables declaration//GEN-END:variables
 }
